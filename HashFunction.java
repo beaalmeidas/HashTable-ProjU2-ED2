@@ -1,6 +1,6 @@
 public class HashFunction {
-    public static int calculate(int registry, int tableSize) {
-        int key = registry % tableSize;
+    public static int calculate(int registryNumber, int tableSize) {
+        int key = registryNumber % tableSize;
         return key;
     }
 }
