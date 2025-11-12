@@ -1,3 +1,6 @@
+package src.model;
+
+
 public class Student {
     private int registryNumber;
     private String name;
