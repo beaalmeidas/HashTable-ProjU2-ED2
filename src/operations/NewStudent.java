@@ -29,7 +29,7 @@ public class NewStudent {
         ClearTerminal.clear();
         
         Student newStudent = new Student(registryNumber, name, age);
-        
+
         System.out.println("\n╔═══════════════════════════════════════════════════════════╗");
         System.out.println("║                    NEW STUDENT ADDED                      ║");
         System.out.println("╠═══════════════════════════════════════════════════════════╣");
@@ -37,7 +37,7 @@ public class NewStudent {
         System.out.printf("║ Name: %s\n", newStudent.getName());
         System.out.printf("║ Age: %s\n", newStudent.getAge());
         System.out.println("╚═══════════════════════════════════════════════════════════╝");
-        
+
         System.out.println("\nPress ENTER to return to the main menu...");
         scan.nextLine();
         ClearTerminal.clear();
