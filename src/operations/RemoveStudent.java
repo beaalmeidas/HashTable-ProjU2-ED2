@@ -6,26 +6,24 @@ import src.utils.CustomHashTable;
 
 
 public class RemoveStudent {
-    public static void remove(CustomHashTable table) {
+    public static void remove(CustomHashTable table, Scanner scan) {
 
-        Student student = SearchStudent.search(table);
+        Student student = SearchStudent.search(table, scan);
 
         if (student != null) {
-            try (Scanner scan = new Scanner(System.in)) {
-                System.out.print("\nDo you really want to remove this student? (y/n): ");
-                String answer = scan.nextLine();
+            System.out.print("\nDo you really want to remove this student? (y/n): ");
+            String answer = scan.nextLine();
 
-                if (answer.equalsIgnoreCase("y")) {
-                    boolean isRemoved = table.remove(student.getRegistryNumber());
+            if (answer.equalsIgnoreCase("y")) {
+                boolean isRemoved = table.remove(student.getRegistryNumber());
 
-                    if (isRemoved) {
-                        System.out.println("\nStudent removed successfully!");
-                    } else {
-                        System.out.println("\nError removing student.");
-                    }
+                if (isRemoved) {
+                    System.out.println("\nStudent removed successfully!");
                 } else {
-                    System.out.println("\nRemoval canceled.");
+                    System.out.println("\nError removing student.");
                 }
+            } else {
+                System.out.println("\nRemoval canceled.");
             }
         }
     }

@@ -33,9 +33,9 @@ public class Main {
             CustomHashTable table = new CustomHashTable(10);
 
             switch (answer) {
-                case 1 -> NewStudent.create(table);
-                case 2 -> SearchStudent.search(table);
-                case 3 -> RemoveStudent.remove(table);
+                case 1 -> NewStudent.create(table, scan);
+                case 2 -> SearchStudent.search(table, scan);
+                case 3 -> RemoveStudent.remove(table, scan);
                 // case 4 -> src.operations.DisplayCustomHashTable.main(new String[0]);
                 case 5 -> {
                     System.out.println("\nGoodbye!\n");

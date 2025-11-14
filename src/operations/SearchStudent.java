@@ -7,9 +7,7 @@ import src.utils.CustomHashTable;
 
 
 public class SearchStudent {
-    public static Student search(CustomHashTable table) {
-
-        Scanner scan = new Scanner(System.in);
+    public static Student search(CustomHashTable table, Scanner scan) {
 
         ClearTerminal.clear();
 
@@ -40,6 +38,10 @@ public class SearchStudent {
             System.out.println("║                   STUDENT NOT FOUND                       ║");
             System.out.println("╚═══════════════════════════════════════════════════════════╝");
         }
+
+        System.out.println("\nPress ENTER to return to the main menu...");
+        scan.nextLine();
+        ClearTerminal.clear();
 
         return student;
     }

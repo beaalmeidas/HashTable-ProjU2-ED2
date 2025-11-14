@@ -8,9 +8,7 @@ import src.utils.CustomHashTable;
 
 
 public class NewStudent {
-    public static void create(CustomHashTable table) {
-
-        Scanner scan = new Scanner(System.in);
+    public static void create(CustomHashTable table, Scanner scan) {
 
         ClearTerminal.clear();
 
