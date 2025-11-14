@@ -4,10 +4,11 @@ package src.operations;
 import java.util.Scanner;
 import src.model.Student;
 import src.utils.ClearTerminal;
+import src.utils.CustomHashTable;
 
 
 public class NewStudent {
-    public static void create(String[] args) {
+    public static void create(CustomHashTable table) {
 
         Scanner scan = new Scanner(System.in);
 
@@ -27,8 +28,9 @@ public class NewStudent {
         System.out.println("╚════════════════════════════════════════════════════════════════╝");
 
         ClearTerminal.clear();
-        
+
         Student newStudent = new Student(registryNumber, name, age);
+        table.insert(newStudent);
 
         System.out.println("\n╔═══════════════════════════════════════════════════════════╗");
         System.out.println("║                    NEW STUDENT ADDED                      ║");

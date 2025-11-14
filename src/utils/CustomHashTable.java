@@ -2,7 +2,6 @@ package src.utils;
 
 import java.util.LinkedList;
 import src.model.Student;
-import utils.HashFunction;
 
 
 public class CustomHashTable {

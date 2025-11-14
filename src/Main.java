@@ -33,7 +33,7 @@ public class Main {
             CustomHashTable table = new CustomHashTable(10);
 
             switch (answer) {
-                case 1 -> NewStudent.create(new String[0]);
+                case 1 -> NewStudent.create(table);
                 case 2 -> SearchStudent.search(table);
                 case 3 -> RemoveStudent.remove(table);
                 // case 4 -> src.operations.DisplayCustomHashTable.main(new String[0]);
