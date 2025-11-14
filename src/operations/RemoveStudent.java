@@ -9,7 +9,7 @@ import src.utils.CustomHashTable;
 public class RemoveStudent {
     public static void remove(CustomHashTable table, Scanner scan) {
 
-        Student student = SearchStudent.search(table, scan);
+        Student student = SearchStudent.search(table, scan, false);
 
         if (student != null) {
             System.out.print("\nDo you really want to remove this student? (y/n): ");

@@ -13,6 +13,8 @@ public class NewStudent {
         ClearTerminal.clear();
 
         System.out.println("\n╔════════════════════════════════════════════════════════════════╗");
+        System.out.println("║                      ADD NEW STUDENT                           ║");
+        System.out.println("╚════════════════════════════════════════════════════════════════╝");
         System.out.print("║ Enter the student's registry number: ");
         int registryNumber = scan.nextInt();
         scan.nextLine();
