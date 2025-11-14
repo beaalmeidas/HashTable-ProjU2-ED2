@@ -1,13 +1,12 @@
-package src.operations;
+package src.utils;
 
 
 import java.util.Scanner;
 import src.model.Student;
-import src.utils.ClearTerminal;
 
 
 public class NewStudent {
-    public static void main(String[] args) {
+    public static void create(String[] args) {
 
         Scanner scan = new Scanner(System.in);
 

@@ -27,8 +27,8 @@ public class Main {
             scan.nextLine();
 
             switch (answer) {
-                case 1 -> src.operations.NewStudent.main(new String[0]);
-                // case 2 -> src.operations.SearchStudent.main(new String[0]);
+                case 1 -> src.utils.NewStudent.create(new String[0]);
+                //case 2 -> src.operations.RemoveStudent.main(new String[0]);
                 // case 3 -> src.operations.RemoveStudent.main(new String[0]);
                 // case 4 -> src.operations.DisplayHashTable.main(new String[0]);
                 case 5 -> {
