@@ -1,8 +1,9 @@
-package src.utils;
+package src.operations;
 
 
 import java.util.Scanner;
 import src.model.Student;
+import src.utils.ClearTerminal;
 
 
 public class NewStudent {

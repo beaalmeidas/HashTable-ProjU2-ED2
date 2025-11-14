@@ -5,13 +5,13 @@ import src.model.Student;
 import utils.HashFunction;
 
 
-public class HashTable {
+public class CustomHashTable {
     // array attribute that stores linked lists of student objects
     private LinkedList<Student>[] table;
 
     // constructor for the table
     @SuppressWarnings("unchecked")
-    public HashTable(int size) {
+    public CustomHashTable(int size) {
         table = (LinkedList<Student>[]) new LinkedList[size];
 
         for (int i = 0; i < size; i++) {

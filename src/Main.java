@@ -1,7 +1,11 @@
 package src;
 
 import java.util.Scanner;
+import src.operations.NewStudent;
+import src.operations.RemoveStudent;
+import src.operations.SearchStudent;
 import src.utils.ClearTerminal;
+import src.utils.CustomHashTable;
 
 
 public class Main {
@@ -26,11 +30,13 @@ public class Main {
             answer = scan.nextInt();
             scan.nextLine();
 
+            CustomHashTable table = new CustomHashTable(10);
+
             switch (answer) {
-                case 1 -> src.utils.NewStudent.create(new String[0]);
-                //case 2 -> src.operations.RemoveStudent.main(new String[0]);
-                // case 3 -> src.operations.RemoveStudent.main(new String[0]);
-                // case 4 -> src.operations.DisplayHashTable.main(new String[0]);
+                case 1 -> NewStudent.create(new String[0]);
+                case 2 -> SearchStudent.search(table);
+                case 3 -> RemoveStudent.remove(table);
+                // case 4 -> src.operations.DisplayCustomHashTable.main(new String[0]);
                 case 5 -> {
                     System.out.println("\nGoodbye!\n");
                     scan.close();
