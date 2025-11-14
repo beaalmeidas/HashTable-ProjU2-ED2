@@ -2,6 +2,7 @@ package src.operations;
 
 import java.util.Scanner;
 import src.model.Student;
+import src.utils.ClearTerminal;
 import src.utils.CustomHashTable;
 
 
@@ -26,5 +27,9 @@ public class RemoveStudent {
                 System.out.println("\nRemoval canceled.");
             }
         }
+
+        System.out.println("\nPress ENTER to return to the main menu...");
+        scan.nextLine();
+        ClearTerminal.clear();
     }
 }
