@@ -1,6 +1,7 @@
 package src;
 
 import java.util.Scanner;
+import src.operations.DisplayTable;
 import src.operations.NewStudent;
 import src.operations.RemoveStudent;
 import src.operations.SearchStudent;
@@ -12,6 +13,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int answer;
+        CustomHashTable table = new CustomHashTable(10);
 
         ClearTerminal.clear();
 
@@ -30,13 +32,11 @@ public class Main {
             answer = scan.nextInt();
             scan.nextLine();
 
-            CustomHashTable table = new CustomHashTable(10);
-
             switch (answer) {
                 case 1 -> NewStudent.create(table, scan);
                 case 2 -> SearchStudent.search(table, scan, true);
                 case 3 -> RemoveStudent.remove(table, scan);
-                // case 4 -> src.operations.DisplayCustomHashTable.main(new String[0]);
+                case 4 -> DisplayTable.display(table, scan);
                 case 5 -> {
                     System.out.println("\nGoodbye!\n");
                     scan.close();

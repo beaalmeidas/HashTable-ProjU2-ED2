@@ -44,18 +44,24 @@ public class CustomHashTable {
     }
 
     public void display() {
-        System.out.println("\nHash Table:");
+        System.out.println("\n╔══════════════════════════════════╗");
+        System.out.println("║            HASH TABLE            ║");
+        System.out.println("╠══════════════════════════════════╣");
 
         for (int i = 0; i < table.length; i++) {
-            System.out.print(i + " → ");
+            System.out.printf("║ %2d => ", i);
+
             if (table[i].isEmpty()) {
-                System.out.println("empty");
+                System.out.print("empty");
             } else {
                 for (Student s : table[i]) {
                     System.out.print("[" + s.getRegistryNumber() + "] ");
                 }
-                System.out.println();
             }
+
+            System.out.println();
         }
+
+        System.out.println("╚══════════════════════════════════╝");
     }
 }
