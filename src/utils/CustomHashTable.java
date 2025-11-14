@@ -18,14 +18,33 @@ public class CustomHashTable {
         }
     }
 
+
     public void insert(Student student) {
         int position = HashFunction.hash(student.getRegistryNumber(), table.length);
         table[position].add(student);
     }
 
+
+    public boolean exists(int registryNumber) {
+        int position = HashFunction.hash(registryNumber, table.length);
+
+        if (table[position] == null) {
+            return false;
+        }
+
+        for (Student student : table[position]) {
+            if (student.getRegistryNumber() == registryNumber) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
     public Student search(int registryNumber) {
         int position = HashFunction.hash(registryNumber, table.length);
-        
+
         // for each student in the list of this position of the array
         for (Student s : table[position]) {
             if (s.getRegistryNumber() == registryNumber) {
@@ -35,6 +54,7 @@ public class CustomHashTable {
         return null;
     }
 
+
     public boolean remove(int registryNumber) {
         int position = HashFunction.hash(registryNumber, table.length);
 
@@ -42,6 +62,7 @@ public class CustomHashTable {
 
         return isRemoved;
     }
+
 
     public void display() {
         System.out.println("\n╔══════════════════════════════════╗");

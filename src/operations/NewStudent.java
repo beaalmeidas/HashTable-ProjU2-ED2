@@ -15,9 +15,22 @@ public class NewStudent {
         System.out.println("\n╔════════════════════════════════════════════════════════════════╗");
         System.out.println("║                      ADD NEW STUDENT                           ║");
         System.out.println("╚════════════════════════════════════════════════════════════════╝");
-        System.out.print("║ Enter the student's registry number: ");
-        int registryNumber = scan.nextInt();
-        scan.nextLine();
+        
+        int registryNumber;
+        while (true) {
+            System.out.print("║ Enter the student's registry number: ");
+            registryNumber = scan.nextInt();
+            scan.nextLine();
+            
+            if (table.exists(registryNumber)) {
+                System.out.println("\n╔════════════════════════════════════════════════════════════════╗");
+                System.out.println("║ ERROR: A student with this registry number already exists!");
+                System.out.println("║ Please enter a different registry number.");
+                System.out.println("╚════════════════════════════════════════════════════════════════╝");
+            } else {
+                break;
+            }
+        }
 
         System.out.print("║ Enter the student's name: ");
         String name = scan.nextLine();
