@@ -27,6 +27,7 @@ public class NewStudent {
                 System.out.println("║ ERROR: A student with this registry number already exists!");
                 System.out.println("║ Please enter a different registry number.");
                 System.out.println("╚════════════════════════════════════════════════════════════════╝");
+                System.out.print("\n");
             } else {
                 break;
             }

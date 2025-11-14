@@ -12,7 +12,7 @@ public class SearchStudent {
         ClearTerminal.clear();
 
         System.out.println("\n╔════════════════════════════════════════════════════════════════╗");
-        System.out.println("║                      STUDENT SEARCH                             ║");
+        System.out.println("║                      STUDENT SEARCH                            ║");
         System.out.println("╠════════════════════════════════════════════════════════════════╣");
         System.out.print("║ Enter the student's registry number: ");
 
