@@ -1,13 +1,19 @@
 package src;
 
 import java.util.Scanner;
+import src.operations.DisplayTable;
+import src.operations.NewStudent;
+import src.operations.RemoveStudent;
+import src.operations.SearchStudent;
 import src.utils.ClearTerminal;
+import src.utils.CustomHashTable;
 
 
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int answer;
+        CustomHashTable table = new CustomHashTable(10);
 
         ClearTerminal.clear();
 
@@ -27,10 +33,10 @@ public class Main {
             scan.nextLine();
 
             switch (answer) {
-                case 1 -> src.operations.NewStudent.main(new String[0]);
-                // case 2 -> src.operations.SearchStudent.main(new String[0]);
-                // case 3 -> src.operations.RemoveStudent.main(new String[0]);
-                // case 4 -> src.operations.DisplayHashTable.main(new String[0]);
+                case 1 -> NewStudent.create(table, scan);
+                case 2 -> SearchStudent.search(table, scan, true);
+                case 3 -> RemoveStudent.remove(table, scan);
+                case 4 -> DisplayTable.display(table, scan);
                 case 5 -> {
                     System.out.println("\nGoodbye!\n");
                     scan.close();
